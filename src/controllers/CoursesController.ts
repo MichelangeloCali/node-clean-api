@@ -8,3 +8,4 @@ export const CourseAdd = (req: Request, res: Response) => {
   const { name } = req.body
   return res.status(201).json({ name })
 }
+c
