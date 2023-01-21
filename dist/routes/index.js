@@ -8,9 +8,9 @@ const express_1 = __importDefault(require("express"));
 const coursesRoutes_1 = require("./coursesRoutes");
 const routes = (app) => {
     app.route('/').get((_request, response) => {
-        response
-            .status(200)
-            .send({ titulo: 'Bem-vindo ao nosso curso de programação' });
+        response.status(200).send({
+            titulo: 'Bem-vindo ao nosso curso de programação',
+        });
     });
     app.use(express_1.default.json(), coursesRoutes_1.coursesRouter);
 };
