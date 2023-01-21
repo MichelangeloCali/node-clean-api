@@ -1,8 +1,8 @@
 Arguments: 
-  /home/michelangelo/.nvm/versions/node/v18.9.0/bin/node /home/michelangelo/.nvm/versions/node/v18.9.0/bin/yarn dev:server-debug
+  /home/michelangelo/.nvm/versions/node/v18.9.0/bin/node /home/michelangelo/.nvm/versions/node/v18.9.0/bin/yarn dev:server-debug --inspect
 
 PATH: 
-  /home/michelangelo/ws/estudos/cursos/alura/nodejs/nodeExpressMongoDB/node_modules/.bin:/tmp/yarn--1674043085966-0.8804067916023828:/home/michelangelo/ws/estudos/cursos/alura/nodejs/nodeExpressMongoDB/node_modules/.bin:/home/michelangelo/.config/yarn/link/node_modules/.bin:/home/michelangelo/.yarn/bin:/home/michelangelo/.nvm/versions/node/v18.9.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/michelangelo/.nvm/versions/node/v18.9.0/lib/node_modules/npm/bin/node-gyp-bin:/home/michelangelo/.nvm/versions/node/v18.9.0/bin/node_modules/npm/bin/node-gyp-bin:/home/michelangelo/.nvm/versions/node/v18.9.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/michelangelo/Android/Sdk/emulator:/home/michelangelo/Android/Sdk/tools:/home/michelangelo/Android/Sdk/tools/bin:/home/michelangelo/Android/Sdk/platform-tools:/home/michelangelo/android-studio/bin:/home/michelangelo/Android/Sdk/emulator:/home/michelangelo/Android/Sdk/tools:/home/michelangelo/Android/Sdk/tools/bin:/home/michelangelo/Android/Sdk/platform-tools:/home/michelangelo/android-studio/bin
+  /home/michelangelo/ws/estudos/cursos/rocketseat/node-trilha-antiga/node-ts/node_modules/.bin:/tmp/yarn--1674264907337-0.29046778676812:/home/michelangelo/ws/estudos/cursos/rocketseat/node-trilha-antiga/node-ts/node_modules/.bin:/home/michelangelo/.config/yarn/link/node_modules/.bin:/home/michelangelo/.yarn/bin:/home/michelangelo/.nvm/versions/node/v18.9.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/michelangelo/.nvm/versions/node/v18.9.0/lib/node_modules/npm/bin/node-gyp-bin:/home/michelangelo/.nvm/versions/node/v18.9.0/bin/node_modules/npm/bin/node-gyp-bin:/home/michelangelo/.nvm/versions/node/v18.9.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/michelangelo/Android/Sdk/emulator:/home/michelangelo/Android/Sdk/tools:/home/michelangelo/Android/Sdk/tools/bin:/home/michelangelo/Android/Sdk/platform-tools:/home/michelangelo/android-studio/bin:/home/michelangelo/Android/Sdk/emulator:/home/michelangelo/Android/Sdk/tools:/home/michelangelo/Android/Sdk/tools/bin:/home/michelangelo/Android/Sdk/platform-tools:/home/michelangelo/android-studio/bin
 
 Yarn version: 
   1.22.19
@@ -63,7 +63,7 @@ npm manifest:
     },
     "scripts": {
       "precommit": "tsc --noEmit && lint-staged",
-      "dev:server": "nodemon",
+      "dev:server": "nodemon --inspect",
       "dev:server-debug": "node -r ts-node/register --inspect=5858 src/index.ts",
       "lint": "tsc --noEmit && eslint '{src,__test__}/**/*.{js,ts,tsx}' --quiet --fix",
       "lint:fix": "eslint . --fix",

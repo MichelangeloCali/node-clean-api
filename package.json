@@ -34,7 +34,7 @@
   },
   "scripts": {
     "precommit": "tsc --noEmit && lint-staged",
-    "dev:server": "nodemon",
+    "dev:server": "nodemon --inspect",
     "dev:server-debug": "node -r ts-node/register --inspect=5858 src/index.ts",
     "lint": "tsc --noEmit && eslint '{src,__test__}/**/*.{js,ts,tsx}' --quiet --fix",
     "lint:fix": "eslint . --fix",
