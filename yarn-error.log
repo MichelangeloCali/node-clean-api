@@ -1,8 +1,8 @@
 Arguments: 
-  /home/michelangelo/.nvm/versions/node/v18.9.0/bin/node /home/michelangelo/.nvm/versions/node/v18.9.0/bin/yarn dev:server-debug --inspect
+  /home/michelangelo/.nvm/versions/node/v18.9.0/bin/node /home/michelangelo/.nvm/versions/node/v18.9.0/bin/yarn dev:server-debug
 
 PATH: 
-  /home/michelangelo/ws/estudos/cursos/rocketseat/node-trilha-antiga/node-ts/node_modules/.bin:/tmp/yarn--1674264907337-0.29046778676812:/home/michelangelo/ws/estudos/cursos/rocketseat/node-trilha-antiga/node-ts/node_modules/.bin:/home/michelangelo/.config/yarn/link/node_modules/.bin:/home/michelangelo/.yarn/bin:/home/michelangelo/.nvm/versions/node/v18.9.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/michelangelo/.nvm/versions/node/v18.9.0/lib/node_modules/npm/bin/node-gyp-bin:/home/michelangelo/.nvm/versions/node/v18.9.0/bin/node_modules/npm/bin/node-gyp-bin:/home/michelangelo/.nvm/versions/node/v18.9.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/michelangelo/Android/Sdk/emulator:/home/michelangelo/Android/Sdk/tools:/home/michelangelo/Android/Sdk/tools/bin:/home/michelangelo/Android/Sdk/platform-tools:/home/michelangelo/android-studio/bin:/home/michelangelo/Android/Sdk/emulator:/home/michelangelo/Android/Sdk/tools:/home/michelangelo/Android/Sdk/tools/bin:/home/michelangelo/Android/Sdk/platform-tools:/home/michelangelo/android-studio/bin
+  /home/michelangelo/ws/estudos/cursos/rocketseat/node-trilha-antiga/node-ts/node_modules/.bin:/tmp/yarn--1674426329124-0.6471426878520052:/home/michelangelo/ws/estudos/cursos/rocketseat/node-trilha-antiga/node-ts/node_modules/.bin:/home/michelangelo/.config/yarn/link/node_modules/.bin:/home/michelangelo/.yarn/bin:/home/michelangelo/.nvm/versions/node/v18.9.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/michelangelo/.nvm/versions/node/v18.9.0/lib/node_modules/npm/bin/node-gyp-bin:/home/michelangelo/.nvm/versions/node/v18.9.0/bin/node_modules/npm/bin/node-gyp-bin:/home/michelangelo/.nvm/versions/node/v18.9.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/michelangelo/Android/Sdk/emulator:/home/michelangelo/Android/Sdk/tools:/home/michelangelo/Android/Sdk/tools/bin:/home/michelangelo/Android/Sdk/platform-tools:/home/michelangelo/android-studio/bin:/home/michelangelo/Android/Sdk/emulator:/home/michelangelo/Android/Sdk/tools:/home/michelangelo/Android/Sdk/tools/bin:/home/michelangelo/Android/Sdk/platform-tools:/home/michelangelo/android-studio/bin
 
 Yarn version: 
   1.22.19
@@ -39,6 +39,7 @@ npm manifest:
       "@types/moxios": "^0.4.15",
       "@types/node": "^18.11.18",
       "@types/supertest": "^2.0.12",
+      "@types/uuid": "^9.0.0",
       "@typescript-eslint/eslint-plugin": "^5.48.1",
       "@typescript-eslint/parser": "^5.48.1",
       "eslint": "^8.32.0",
@@ -48,24 +49,25 @@ npm manifest:
       "jest": "^29.3.1",
       "lint-staged": "^13.1.0",
       "moxios": "^0.4.0",
+      "nodemon": "^2.0.20",
       "prettier": "^2.8.3",
       "supertest": "^6.3.3",
       "ts-jest": "^29.0.5",
       "ts-node": "^10.9.1",
-      "nodemon": "^2.0.20",
       "typescript": "^4.9.4"
     },
     "dependencies": {
       "axios": "^1.2.2",
       "dotenv": "^16.0.3",
       "express": "^4.18.2",
-      "mongoose": "6.2.6"
+      "mongoose": "6.2.6",
+      "uuid": "^9.0.0"
     },
     "scripts": {
       "precommit": "tsc --noEmit && lint-staged",
-      "dev:server": "nodemon --inspect",
+      "dev:server": "nodemon",
       "dev:server-debug": "node -r ts-node/register --inspect=5858 src/index.ts",
-      "lint": "tsc --noEmit && eslint '{src,__test__}/**/*.{js,ts,tsx}' --quiet --fix",
+      "lint": "tsc --noEmit && eslint '{src,__test__}/**/*.{js,ts,tsx}' --quiet",
       "lint:fix": "eslint . --fix",
       "obsolete:prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
       "build": "tsc",
@@ -77,8 +79,7 @@ npm manifest:
     },
     "lint-staged": {
       "*.{js,ts,tsx}": [
-        "eslint --fix --quiet",
-        "git add"
+        "eslint --fix --quiet"
       ]
     }
   }
@@ -926,6 +927,11 @@ Lockfile:
     integrity sha512-X3HPWTwXRerBZS7Mo1k6vMVR1Z6zmJcDVn5O/31whe0tnjE4te6ZJSJGq1RiqHPjzPdMTfjCFogDJmwng9xHaQ==
     dependencies:
       "@types/superagent" "*"
+  
+  "@types/uuid@^9.0.0":
+    version "9.0.0"
+    resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-9.0.0.tgz#53ef263e5239728b56096b0a869595135b7952d2"
+    integrity sha512-kr90f+ERiQtKWMz5rP32ltJ/BtULDI5RVO0uavn1HQUOwjx0R1h0rnDYNL0CepF1zL5bSY6FISAfd9tOdDhU5Q==
   
   "@types/webidl-conversions@*":
     version "7.0.0"
@@ -4018,6 +4024,11 @@ Lockfile:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
     integrity sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==
+  
+  uuid@^9.0.0:
+    version "9.0.0"
+    resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
+    integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
   
   v8-compile-cache-lib@^3.0.1:
     version "3.0.1"
