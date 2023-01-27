@@ -4,14 +4,13 @@ import { CategoriesRepository } from '../modules/cars/repositories/CategoriesRep
 import { createCategoryController } from '../modules/cars/useCases/createCategory'
 
 export const categoriesRoutes = Router()
-
 const categoriesRepository = new CategoriesRepository()
 
-categoriesRoutes.post('/categories', (req: Request, res: Response) => {
+categoriesRoutes.post('/', (req: Request, res: Response) => {
   return createCategoryController.handle(req, res)
 })
 
-categoriesRoutes.get('/categories', (req: Request, res: Response) => {
+categoriesRoutes.get('/', (req: Request, res: Response) => {
   const listAll = categoriesRepository.list()
   return res.json(listAll)
 })

@@ -6,7 +6,7 @@ export const specificationsRoutes = Router()
 
 const specificationsRepository = new SpecificationsRepository()
 
-specificationsRoutes.post('/specifications', (req: Request, res: Response) => {
+specificationsRoutes.post('/', (req: Request, res: Response) => {
   const { name, description } = req.body
 
   const createSpecificationService = new CreateSpecificationService(
