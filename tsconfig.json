@@ -8,6 +8,7 @@
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": ".",
+    "resolveJsonModule": true,
     "skipLibCheck": true, //after install multer error: has no exported member 'Locals' "interface Locals extends core.Locals {}"
     "paths": {
       "*": ["node_modules/*"]
